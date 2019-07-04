@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:background="@color/colorBlack"
+    tools:context="com.demo.xu.shell.ShellActivity">
+
+    <RelativeLayout
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:scrollbars="vertical"
+            android:scrollbarFadeDuration="1500"
+            android:scrollbarStyle="insideOverlay"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            />
+
+        <TextView
+            android:id="@+id/tv_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_show"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentStart="true"
+            />
+
+        <!--分隔符-->
+        <TextView
+            android:id="@+id/tv_split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n>"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@id/tv_show"
+            android:layout_toEndOf="@id/tv_path"/>
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:inputType="textLongMessage"
+            android:minHeight="50dp"
+            android:layout_below="@id/tv_show"
+            android:layout_toEndOf="@id/tv_split"
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+
+</ScrollView>
